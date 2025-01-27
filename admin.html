@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIM Offers Admin</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      h1,
+      h2 {
+        color: #333;
+      }
+
+      #formattedOffers {
+        font-family: monospace;
+        font-size: 14px;
+      }
+
+      #offersTable {
+        font-size: 14px;
+      }
+
+      #offerForm {
+        background-color: #f1f3f5;
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      .btn-success {
+        margin-top: 20px;
+      }
+
+      .action-buttons {
+        white-space: nowrap;
+      }
+
+      .action-buttons .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 class="mb-4">SIM Offers Admin</h1>
+
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <h2>Formatted Offers</h2>
+          <textarea
+            id="formattedOffers"
+            class="form-control"
+            rows="15"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <h2>Manage Offers</h2>
+          <button id="addNewOffer" class="btn btn-success mb-3">
+            <i class="bi bi-plus-circle"></i> Add New Offer
+          </button>
+          <table id="offersTable" class="table table-striped">
+            <thead>
+              <tr>
+                <th>Operator</th>
+                <th>Data</th>
+                <th>Price</th>
+                <th>Validity</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="offerForm" class="row mb-4" style="display: none">
+        <div class="col-md-12">
+          <h2 id="formTitle">Add/Edit Offer</h2>
+          <form id="offerFormElement">
+            <input type="hidden" id="editOfferId" />
+            <div class="mb-3">
+              <label for="editOperator" class="form-label">Operator</label>
+              <select class="form-control" id="editOperator" required></select>
+            </div>
+            <div class="mb-3">
+              <label for="editData" class="form-label">Data</label>
+              <input type="text" class="form-control" id="editData" required />
+            </div>
+            <div class="mb-3">
+              <label for="editPrice" class="form-label">Price</label>
+              <input type="text" class="form-control" id="editPrice" required />
+            </div>
+            <div class="mb-3">
+              <label for="editValidity" class="form-label">Validity</label>
+              <input
+                type="text"
+                class="form-control"
+                id="editValidity"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Save Offer</button>
+            <button type="button" class="btn btn-secondary" id="cancelEdit">
+              Cancel
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <button id="saveJSON" class="btn btn-success">
+        <i class="bi bi-download"></i> Save JSON
+      </button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/admin.js"></script>
+  </body>
+</html>

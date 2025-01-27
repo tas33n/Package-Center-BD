@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্যাকেজ সেন্টার বিডি - @tas33n</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <div class="animated-background">
+        <div class="gradient-sphere"></div>
+        <div class="gradient-sphere"></div>
+        <div class="gradient-sphere"></div>
+    </div>
+
+    <header class="app-header">
+        <h1>প্যাকেজ সেন্টার বিডি</h1>
+    </header>
+
+    <main class="app-content">
+        <section class="hot-offers-section">
+            <h2 class="section-title glow-text">Hot Exclusive Offers</h2>
+            <div class="hot-offers-slider" id="hot-offers-slider">
+                <!-- Hot offers will be loaded here -->
+            </div>
+        </section>
+
+        <section class="operators-section glass-container">
+            <h2 class="section-title">Choose Your Operator</h2>
+            <div class="operators-grid" id="operators-grid">
+                <!-- Operators will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Package Filters -->
+        <section class="filters-section">
+            <div class="filter-buttons" id="filter-buttons">
+                <button class="btn btn-filter active" data-type="all">All</button>
+                <button class="btn btn-filter" data-type="data">Data</button>
+                <button class="btn btn-filter" data-type="minutes">Minutes</button>
+                <button class="btn btn-filter" data-type="sms">SMS</button>
+                <button class="btn btn-filter" data-type="bundle">Bundle</button>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="search-filter-section glass-container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search offers...">
+            </div>
+            <div class="price-range">
+                <input type="number" id="min-price" placeholder="Min Price">
+                <input type="number" id="max-price" placeholder="Max Price">
+            </div>
+            <div class="sort-dropdown">
+                <select id="sort-select">
+                    <option value="default">Sort by</option>
+                    <option value="price-low-high">Price: Low to High</option>
+                    <option value="price-high-low">Price: High to Low</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Packages Grid -->
+        <section class="packages-section">
+            <div class="packages-grid" id="packages-grid">
+                <!-- Packages will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <div class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
+

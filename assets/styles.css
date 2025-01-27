@@ -1,0 +1,527 @@
+:root {
+    --gradient-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    --neon-gradient: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --text-color: #ffffff;
+    --accent-color: #ff6b6b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background: var(--gradient-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.gradient-sphere {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    animation: float 20s infinite;
+}
+
+.gradient-sphere:nth-child(1) {
+    background: radial-gradient(circle, #ff6b6b, transparent);
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+}
+
+.gradient-sphere:nth-child(2) {
+    background: radial-gradient(circle, #4834d4, transparent);
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    right: -25px;
+}
+
+.gradient-sphere:nth-child(3) {
+    background: radial-gradient(circle, #2ecc71, transparent);
+    width: 175px;
+    height: 175px;
+    bottom: -50px;
+    left: 50%;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(25px, 25px);
+    }
+
+    50% {
+        transform: translate(0, 50px);
+    }
+
+    75% {
+        transform: translate(-25px, 25px);
+    }
+}
+
+.app-header {
+    padding: 1rem;
+    text-align: center;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.app-header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.app-content {
+    padding: 1rem;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.glow-text {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 107, 107, 0.6);
+    }
+}
+
+.hot-offers-section {
+    margin-bottom: 2rem;
+}
+
+.hot-offers-slider {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.hot-offer-card {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.hot-offer-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.hot-offer-card .price {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-top: auto;
+}
+
+/* .hot-offer-card::before {
+    content: "Click to copy offer details";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  } */
+
+.hot-offer-card:hover::before {
+    opacity: 1;
+}
+
+.hot-offer-card:hover {
+    transform: scale(1.02);
+}
+
+.hot-offer-card:active {
+    transform: scale(0.98);
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.operators-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.operator-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    padding: 0.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.operator-card.active {
+    background: var(--neon-gradient);
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.5);
+}
+
+.operator-card:active {
+    transform: scale(0.95);
+}
+
+.operator-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.operator-card h3 {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.filter-buttons {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-filter {
+    flex: 0 0 auto;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-color);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-filter.active {
+    background: var(--neon-gradient);
+    border-color: transparent;
+}
+
+.packages-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.package-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.package-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.package-card .validity {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.package-card .features {
+    list-style-type: none;
+    padding: 0;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.package-card .price {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    margin-top: auto;
+    margin-bottom: 0.5rem;
+}
+
+/* .package-card::before {
+    content: "Click to copy offer details";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  } */
+
+.package-card:hover::before {
+    opacity: 1;
+}
+
+.package-card:hover {
+    transform: scale(1.02);
+}
+
+.package-card:active {
+    transform: scale(0.98);
+}
+
+.buy-btn {
+    background: var(--neon-gradient);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buy-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.buy-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    border-top-color: var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.search-filter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-box input,
+.price-range input,
+.sort-dropdown select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+}
+
+.price-range {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.price-range input {
+    width: 50%;
+}
+
+.sort-dropdown select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1em;
+}
+
+@media (min-width: 768px) {
+    .app-header h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .hot-offers-slider {
+        overflow-x: visible;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .hot-offer-card {
+        flex: none;
+    }
+
+    .operators-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .packages-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .search-filter-section {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .search-box {
+        flex: 2;
+    }
+
+    .price-range {
+        flex: 1;
+    }
+
+    .sort-dropdown {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .app-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .packages-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+#sort-select option {
+    background-color: rgb(23 32 59 / 80%);
+    color: var(--text-color);
+}
+
+/* admin page */
+
+#formattedOffers {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+#offersTable {
+    font-size: 14px;
+}
+
+#editForm {
+    background-color: #f1f3f5;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.btn-success {
+    margin-top: 20px;
+}
