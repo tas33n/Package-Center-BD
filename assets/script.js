@@ -1,14 +1,11 @@
-// Show loading overlay
 function showLoading() {
   $(".loading-overlay").show();
 }
 
-// Hide loading overlay
 function hideLoading() {
   $(".loading-overlay").hide();
 }
 
-// Fetch JSON data
 async function fetchOffers() {
   showLoading();
   try {
@@ -23,7 +20,6 @@ async function fetchOffers() {
   }
 }
 
-// Load hot exclusive offers
 function loadHotOffers(offers) {
   const hotOffersSlider = $("#hot-offers-slider");
   hotOffersSlider.empty();
@@ -72,7 +68,6 @@ function loadOperators(operators) {
   });
 }
 
-// Filter and sort packages
 function filterAndSortPackages(packages) {
   const searchTerm = $("#search-input").val().toLowerCase();
   const minPrice = Number.parseFloat($("#min-price").val()) || 0;
@@ -104,7 +99,6 @@ function filterAndSortPackages(packages) {
   return filteredPackages;
 }
 
-// Update loadPackages function to support appending
 function loadPackages(operator, type, packages, append = false) {
   const packagesGrid = $("#packages-grid");
   if (!append) {
@@ -147,7 +141,6 @@ function loadPackages(operator, type, packages, append = false) {
   }
 }
 
-// Initialize swiper for hot offers
 function initHotOffersSwiper() {
   new Swiper(".hot-offers-slider", {
     slidesPerView: "auto",
@@ -205,7 +198,6 @@ function loadMorePackages(data) {
   }
 }
 
-// Initialize the page
 async function initializePage() {
   const data = await fetchOffers();
   if (!data) return;
@@ -221,7 +213,6 @@ async function initializePage() {
   initHotOffersSwiper();
   initLazyLoading(data);
 
-  // Handle operator selection
   $(document).on("click", ".operator-card", function () {
     const operator = $(this).data("operator");
     $(".operator-card").removeClass("active");
@@ -242,10 +233,8 @@ async function initializePage() {
     loadPackages(operator, type, data.operators[operator].packages);
   });
 
-  // Handle load more button
   $(document).on("click", ".load-more-btn", () => loadMorePackages(data));
 
-  // Handle search and filter inputs
   $("#search-input, #min-price, #max-price, #sort-select").on(
     "input change",
     () => {
@@ -327,3 +316,29 @@ function generateWhatsAppLink(offerElement) {
   );
   return `https://wa.me/+8801309222016?text=${message}`;
 }
+
+// my credit
+function createMadeWithLoveMessage() {
+  const footer = document.createElement("footer");
+  footer.className = "text-center p-3";
+  footer.style.cssText = `
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+  `;
+
+  const link = document.createElement("a");
+  link.target = "_blank";
+  link.href = "https://github.com/tas33n";
+  link.style.textDecoration = "none";
+  link.style.color = "#333";
+  link.innerHTML = 'Made with <span style="color: #ff4f4f;">♥</span> by tas33n';
+  footer.appendChild(link);
+  document.body.appendChild(footer);
+
+  setTimeout(() => {
+    footer.style.opacity = "1";
+  }, 3000);
+}
+
+document.addEventListener("DOMContentLoaded", createMadeWithLoveMessage);

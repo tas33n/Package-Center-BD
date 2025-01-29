@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="white" />
+
+  <!-- Icon (SIM Card Shape) -->
+  <rect x="150" y="100" width="200" height="300" rx="30" ry="30" fill="#0073e6" stroke="#004a99" stroke-width="5" />
+  <rect x="180" y="150" width="140" height="60" fill="#ffffff" rx="10" ry="10" />
+  <circle cx="250" cy="270" r="15" fill="#ffffff" />
+  <circle cx="250" cy="310" r="15" fill="#ffffff" />
+  <circle cx="250" cy="350" r="15" fill="#ffffff" />
+
+  <!-- Network Signal Bars -->
+  <rect x="360" y="200" width="20" height="40" fill="#00cc66" />
+  <rect x="390" y="180" width="20" height="60" fill="#00cc66" />
+  <rect x="420" y="160" width="20" height="80" fill="#00cc66" />
+
+  <!-- Bengali Text: প্যাকেজ সেন্টার বিডি -->
+  <text x="250" y="440" font-size="40" font-family="Bangla" fill="#333" text-anchor="middle" font-weight="bold">প্যাকেজ সেন্টার বিডি</text>
+</svg>

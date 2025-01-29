@@ -1,138 +1,139 @@
 {
-  "highlightOffers": [
-    {
-      "id": 1,
-      "operator": "robi",
-      "title": "Mega Internet Pack",
-      "data": "25GB",
-      "validity": "30 Days",
-      "price": "399",
-      "type": "data",
-      "isHot": true
-    },
-    {
-      "id": 2,
-      "operator": "grameenphone",
-      "title": "Super Bundle",
-      "data": "15GB + 500 Minutes",
-      "validity": "30 Days",
-      "price": "499",
-      "type": "bundle",
-      "isHot": true
-    },
-    {
-      "id": 3,
-      "operator": "banglalink",
-      "title": "Freedom Pack",
-      "data": "20GB",
-      "validity": "30 Days",
-      "price": "349",
-      "type": "data",
-      "isHot": true
-    }
-  ],
-  "operators": {
-    "robi": {
-      "name": "Robi",
-      "logo": "https://www.robi.com.bd/static/images/robi-white-bn-logo.svg",
-      "packages": [
-        {
-          "id": 1,
-          "type": "data",
-          "volume": "10 GB",
-          "validity": "7 Days",
-          "price": "199",
-          "features": ["4G Speed", "No FUP"]
-        },
-        {
-          "id": 2,
-          "type": "bundle",
-          "volume": "5 GB + 100 Minutes",
-          "validity": "30 Days",
-          "price": "299",
-          "features": ["Any Network", "24/7 Valid"]
-        }
-      ]
-    },
-    "grameenphone": {
-      "name": "GrameenPhone",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Grameenphone_Logo_GP_Logo.svg/120px-Grameenphone_Logo_GP_Logo.svg.png",
-      "packages": [
-        {
-          "id": 1,
-          "type": "data",
-          "volume": "12 GB",
-          "validity": "7 Days",
-          "price": "249",
-          "features": ["4G Speed", "No FUP"]
-        }
-      ]
-    },
-    "airtel": {
-      "name": "Airtel",
-      "logo": "https://www.bd.airtel.com/static/images/logo_airtel.png",
-      "packages": [
-        {
-          "id": 1,
-          "type": "data",
-          "volume": "50 GB",
-          "validity": "30 Days",
-          "price": "600",
-          "features": ["5G Speed", "No FUP"]
-        },
-        {
-          "id": 2,
-          "type": "bundle",
-          "volume": "5 GB + 100 Minutes",
-          "validity": "30 Days",
-          "price": "299",
-          "features": ["Any Network", "24/7 Valid"]
-        }
-      ]
-    },
-    "banglalink": {
-      "name": "Banglalink",
-      "logo": "https://banglalink.net/logo.svg",
-      "packages": [
-        {
-          "id": 1,
-          "type": "data",
-          "volume": "100 GB",
-          "validity": "90 Days",
-          "price": "1099",
-          "features": ["5G Speed", "No FUP"]
-        },
-        {
-          "id": 2,
-          "type": "bundle",
-          "volume": "5 GB + 100 Minutes",
-          "validity": "30 Days",
-          "price": "299",
-          "features": ["Any Network", "24/7 Valid"]
-        }
-      ]
-    },
-    "teletalk": {
-      "name": "Teletalk",
-      "logo": "https://www.teletalk.com.bd/themes/teletalk/assets/main/images/logo_light.png",
-      "packages": [
-        {
-          "id": 1,
-          "type": "data",
-          "volume": "1 GB",
-          "validity": "7 Days",
-          "price": "99",
-          "features": ["4G Speed", "No FUP"]
-        },
-        {
-          "id": 2,
-          "type": "bundle",
-          "volume": "5 GB + 100 Minutes",
-          "validity": "30 Days",
-          "price": "299",
-          "features": ["Any Network", "24/7 Valid"]
-        }
-      ]
+    "highlightOffers": [
+      {
+        "id": 1,
+        "operator": "robi",
+        "title": "Mega Internet Pack",
+        "data": "25GB",
+        "validity": "30 Days",
+        "price": "399",
+        "type": "data",
+        "isHot": true
+      },
+      {
+        "id": 2,
+        "operator": "grameenphone",
+        "title": "Super Bundle",
+        "data": "15GB + 500 Minutes",
+        "validity": "30 Days",
+        "price": "499",
+        "type": "bundle",
+        "isHot": true
+      },
+      {
+        "id": 3,
+        "operator": "banglalink",
+        "title": "Freedom Pack",
+        "data": "20GB",
+        "validity": "30 Days",
+        "price": "349",
+        "type": "data",
+        "isHot": true
+      }
+    ],
+    "operators": {
+      "robi": {
+        "name": "Robi",
+        "logo": "https://www.robi.com.bd/static/images/robi-white-bn-logo.svg",
+        "packages": [
+          {
+            "id": 1,
+            "type": "data",
+            "volume": "10 GB",
+            "validity": "7 Days",
+            "price": "199",
+            "features": ["4G Speed", "No FUP"]
+          },
+          {
+            "id": 2,
+            "type": "bundle",
+            "volume": "5 GB + 100 Minutes",
+            "validity": "30 Days",
+            "price": "299",
+            "features": ["Any Network", "24/7 Valid"]
+          }
+        ]
+      },
+      "grameenphone": {
+        "name": "GrameenPhone",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Grameenphone_Logo_GP_Logo.svg/120px-Grameenphone_Logo_GP_Logo.svg.png",
+        "packages": [
+          {
+            "id": 1,
+            "type": "data",
+            "volume": "12 GB",
+            "validity": "7 Days",
+            "price": "249",
+            "features": ["4G Speed", "No FUP"]
+          }
+        ]
+      },
+      "airtel": {
+        "name": "Airtel",
+        "logo": "https://www.bd.airtel.com/static/images/logo_airtel.png",
+        "packages": [
+          {
+            "id": 1,
+            "type": "data",
+            "volume": "50 GB",
+            "validity": "30 Days",
+            "price": "600",
+            "features": ["5G Speed", "No FUP"]
+          },
+          {
+            "id": 2,
+            "type": "bundle",
+            "volume": "5 GB + 100 Minutes",
+            "validity": "30 Days",
+            "price": "299",
+            "features": ["Any Network", "24/7 Valid"]
+          }
+        ]
+      },
+      "banglalink": {
+        "name": "Banglalink",
+        "logo": "https://banglalink.net/logo.svg",
+        "packages": [
+          {
+            "id": 1,
+            "type": "data",
+            "volume": "100 GB",
+            "validity": "90 Days",
+            "price": "1099",
+            "features": ["5G Speed", "No FUP"]
+          },
+          {
+            "id": 2,
+            "type": "bundle",
+            "volume": "5 GB + 100 Minutes",
+            "validity": "30 Days",
+            "price": "299",
+            "features": ["Any Network", "24/7 Valid"]
+          }
+        ]
+      },
+      "teletalk": {
+        "name": "Teletalk",
+        "logo": "https://www.teletalk.com.bd/themes/teletalk/assets/main/images/logo_light.png",
+        "packages": [
+          {
+            "id": 1,
+            "type": "data",
+            "volume": "1 GB",
+            "validity": "7 Days",
+            "price": "99",
+            "features": ["4G Speed", "No FUP"]
+          },
+          {
+            "id": 2,
+            "type": "bundle",
+            "volume": "5 GB + 100 Minutes",
+            "validity": "30 Days",
+            "price": "299",
+            "features": ["Any Network", "24/7 Valid"]
+          }
+        ]
+      }
     }
   }
-}
+  
